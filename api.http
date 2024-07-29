@@ -1,0 +1,33 @@
+### Ir a la pagina principal
+http://localhost:3000
+
+### Mostrar todas los productos
+GET http://localhost:3000/productos
+
+### Mostrar una peli por id (id de manzana: 66a7e6a790023be64fed09e7 / id de kiwi: 66a7e6a790023be64fed09f0 )
+GET http://localhost:3000/productos/66a7e6a790023be64fed09f0
+
+### Mostrar los productos buscando por nombre
+GET http://localhost:3000/productos/nombre/zapallo
+
+### Agregar un producto
+POST http://localhost:3000/productos/
+content-type: application/json
+
+{
+    "codigo": 32,
+    "nombre": "Zapallo",
+    "precio": 2.99,
+    "categoria": "Verdura"
+}
+
+### Actualizar el precio de un producto
+PATCH http://localhost:3000/productos/66a80d5ded8ec330b3f863a2
+content-type: application/json
+
+{
+    "precio": 3.25
+}
+
+### Borrar un producto por id
+DELETE http://localhost:3000/productos/66a80d5ded8ec330b3f863a2
